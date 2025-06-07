@@ -292,7 +292,7 @@
            &kp C_BRI_UP  &kp C_BRI_DN &kp C_MUTE      &kp C_VOL_UP      &kp C_VOL_DN        &trans    &trans   &trans   &trans    &trans
            &kp C_PREV    &kp C_RW     &kp C_PP        &kp C_FF          &kp C_NEXT          &kp PG_UP &kp HOME &kp UP   &kp END   &trans
 &sys_reset &hl LALT CLCK &hl LGUI INS &hl LSHFT PSCRN &hl LCTRL K_CMENU &studio_unlock      &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &trans          &trans
-&trans     &trans        &tog ERGOL   &tog KEYCODE        &trans            &trans              &kp C_PP  &RCTRL   &RSHFT   &RGUI     &hr LALT C_PWR  &trans
+&trans &trans &tog ERGOL &tog KEYCODE &trans &trans &kp C_PP &kp RCTRL &kp RSHFT &kp RGUI &hr LALT C_PWR &trans
                                                &trans &trans &trans &trans &trans &trans
             >;
         };
