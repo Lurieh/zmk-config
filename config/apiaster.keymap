@@ -25,7 +25,7 @@
 / {    
     macros {
         double_0: double_0 {
-            compatible = "zmk, behavior-macro";
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp KP_NUMBER_0>
