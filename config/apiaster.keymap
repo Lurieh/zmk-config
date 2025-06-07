@@ -28,7 +28,8 @@
             compatible = "zmk, behavior-macro";
             #binding-cells = <0>;
             bindings
-            = <&macro_tap &kp KP_NUMBER_0 &kp KP_NUMBER_0>;
+                = <&macro_tap &kp KP_NUMBER_0>
+                , <&macro_tap &kp KP_NUMBER_0>;
         };
 
         // Ergo-L Macros
