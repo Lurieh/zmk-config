@@ -102,9 +102,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp SEMI>
-                , <&macro_tap &kp SEMI>
-                , <&macro_tap &kp I>;
+                = <&macro_tap &kp COMPOSE_KEY>
+                , <&macro_tap &kp DOUBLE_QUOTES>;
         };
 
         cmp_sq_u: compose_accents_single_quote_upper {
@@ -163,24 +162,6 @@
                 , <&macro_tap &kp O>
                 , <&macro_tap &kp E>
                 , <&macro_release &kp LSHFT>;
-        };
-
-        cmp_lpar: compose_left_parenthesis {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp RALT>
-                , <&macro_tap &kp S>
-                , <&macro_release &kp RALT>;
-        };
-
-        cmp_rpar: compose_right_parenthesis {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp RALT>
-                , <&macro_tap &kp D>
-                , <&macro_release &kp RALT>;
         };
 
         cmp_i_trem_u: compose_i_trema_upper {
@@ -283,7 +264,7 @@
             display-name = "Ergo-L";
             bindings = <
           &kp N1      &kp N2     &kp N3     &kp N4       &kp N5                      &kp N6   &kp N7      &kp N8      &kp N9       &kp N0
-          &kp Q       &kp C      &kp O      &kp P        &kp W                       &kp J    &kp M       &kp D       &kp SEMI    &kp Y
+          &kp Q       &kp C      &kp O      &kp P        &kp W                       &kp J    &kp M       &kp D       &dead_key    &kp Y
  &kp TAB  &hl LALT A &hl LGUI S &hl LSHFT E &hl LCTRL N  &kp F                       &kp L    &hr RCTRL R &hr RSHFT T &hr RGUI I   &hr LALT U &kp ENTER
  &kp BSLH &kp Z       &kp X      &minus_qm  &kp V        &kp B                       &dot_col &kp H       &kp G       &com_scol    &kp K      &kp DOUBLE_QUOTES
                                             &kp ESC &kp SPACE &mo LOWER &mo RAISE &hg RALT BSPC &kp DEL
@@ -359,18 +340,18 @@
 
         // Ergo-L Layers
         dead_key_layer {
-            display-name = "deadkey";
+            display-name = "deadkeys";
             bindings = <
-          &trans &trans &trans &trans &trans           &trans &trans &trans &trans &trans
-          &kp Z &kp C &kp O &kp L &none                      &none &kp M &kp V &cmp_trem &kp J
-&trans &hl LALT A &hl LGUI W &hl LSHFT E &hl LCTRL D &none     &cmp_lpar &hr LCTRL cmp_rpar &hr LSHFT K &hr LGUI cmp_i_trem &hr LALT U &trans
-&trans &kp Q &trans &trans &trans &trans &trans          &trans &trans &trans &trans &trans
+          &trans     &trans     &trans       &trans         &trans           &trans        &trans         &trans        &trans         &trans
+          &kp RA(Q) &kp RA(C) &kp RA(P) &kp RA(N9) &none &none &cmp_micro &kp LS(MINUS) &cmp_trem &kp RA(N7)
+&trans    &hl LALT RA(A)  &hl LGUI RA(W)  &hl LSHFT RA(E)    &hl LCTRL RA(N3)     &none            &kp LS(N9)      &hl LCTRL LS(N0)       &hl LSHFT RA(N8)    &LGUI RA(N8)    &LALT RA(U)   &trans
+&trans    &kp RA(S)     &trans     &trans       &trans         &trans           &trans        &trans         &trans        &trans         &trans       &trans
                                        &trans   &trans  &trans  &trans &trans    &trans
             >;
         };
 
         upper_dead_key_layer {
-            display-name = "DEADKEY";
+            display-name = "DEADKEYS";
             bindings = <
           &trans       &trans     &trans       &trans         &trans           &trans        &trans         &trans        &trans         &trans
           &cmp_car_u A &cedille_u &cmp_oe_u    &cmp_car_u O   &none            &none         &cmp_micro     &kp UNDER     &cmp_trem      &cmp_car_u U
