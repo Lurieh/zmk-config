@@ -356,7 +356,7 @@
             bindings = <
           &trans &trans &trans &trans &trans           &trans &trans &trans &trans &trans
           &kp Z &kp C &kp O &kp L &none                      &none &kp M &kp V &cmp_trem &kp J
-&trans &hl LALT A &hl LGUI W &hl LSHFT E &hl LCTRL D &none     &kp LPAR &hr LCTRL RPAR &hr LSHFT K &hcr LGUI cmp_i_trem &hr LALT U &trans
+&trans &hl LALT A &hl LGUI W &hl LSHFT E &hl LCTRL D &none     &trans &trans &hr LSHFT K &hcr LGUI cmp_i_trem &hr LALT U &trans
 &trans &kp Q &trans &trans &trans &trans &trans          &trans &trans &trans &trans &trans
                                        &trans   &trans  &trans  &trans &trans    &trans
             >;
