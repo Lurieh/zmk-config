@@ -268,7 +268,7 @@
           &kp Q       &kp C      &kp O      &kp P        &kp W                       &kp J    &kp M       &kp D       &dead_key    &kp Y
  &kp TAB  &hl LSHFT A &hl LGUI S &hl LALT E &hl LCTRL N  &kp F                       &kp L    &hr RCTRL R &hr RSHFT T &hr RGUI I   &hr LALT U &kp ENTER
  &kp BSLH &kp Z       &kp X      &minus_qm  &kp V        &kp B                       &dot_col &kp H       &kp G       &com_scol    &kp K      &kp DOUBLE_QUOTES
-                                            &kp ESC &kp SPACE &mo LOWER &mo RAISE &hg BSPC COMPOSE_KEY &kp DEL
+                                            &kp ESC &kp SPACE &mo LOWER &mo RAISE &hg RALT BSPC &kp DEL
             >;
         };
 
@@ -295,7 +295,7 @@
         };
       
         charcode_layer {
-            display-name = "CharacterCode-gaming";
+            display-name = "CharCode";
             bindings = <
           &kp N1     &kp N2   &kp N3   &kp N4   &kp N5                            &kp N6 &kp N7    &kp N8    &kp N9 &kp N0
           &kp LCTRL  &kp Q    &kp T    &kp D    &kp J                             &kp P  &kp SEMI  &kp L     &kp E  &kp R 
@@ -306,7 +306,7 @@
         };
 
         extra_charcode_layer {
-            display-name = "CharacterCode-gaming-extra";
+            display-name = "CharCode+";
             bindings = <
           &trans   &trans   &kp K    &kp COMMA &kp B                              &trans &trans &trans &trans &trans  
           &kp P    &kp SEMI &kp L    &kp E     &kp R                              &trans &trans &trans &trans &trans  
@@ -318,7 +318,7 @@
 
 
         keycode_layer {
-            display-name = "KeyCode-gaming";
+            display-name = "KeyCode";
             bindings = <
           &kp N1     &kp N2   &kp N3   &kp N4   &kp N5                            &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
           &kp N6     &kp Q    &kp W    &kp E    &kp R                             &none  &none  &none  &none  &none 
@@ -329,7 +329,7 @@
         };
 
         extra_keycode_layer {
-            display-name = "KeyCode-gaming-extra";
+            display-name = "KeyCode+";
             bindings = <
           &trans   &trans &kp T     &kp G   &kp B                  &trans    &trans  &trans  &trans  &trans  
           &kp Y    &kp I  &kp U     &kp O   &kp P                  &trans    &trans  &trans  &trans  &trans  
@@ -341,18 +341,18 @@
 
         // Ergo-L Layers
         dead_key_layer {
-            display-name = "dead";
+            display-name = "deadkeys";
             bindings = <
           &trans     &trans     &trans       &trans         &trans           &trans        &trans         &trans        &trans         &trans
-          &cmp_car A &cedille   &cmp_oe      &cmp_car O     &none            &none         &cmp_micro     &kp UNDER     &cmp_trem      &cmp_car U
-&trans    &cmp_gq A  &cmp_sq E  &cmp_gq E    &cmp_car E     &none            &kp LPAR      &kp RPAR       &cmp_car I    &cmp_i_trem    &cmp_gq U    &trans
-&trans    &trans     &trans     &trans       &trans         &trans           &trans        &trans         &trans        &trans         &trans       &trans
+          &kp RA(kp Q)       &kp RA(kp C)   &kp RA(kp P)      &kp RA(kp N9)     &none            &none         &cmp_micro     &kp LS(MINUS)     &cmp_trem      &kp RA(kp N7)
+&trans    &kp RA(kp A)  &kp RA(kp W)  &kp RA(kp E)    &kp RA(kp N3)     &none            &kp LS(kp N9)      &kp LS(kp N0)       &kp RA(kp N8)    &kp RA(kp N8)    &kp RA(kp U)   &trans
+&trans    &kp RA(kp S)     &trans     &trans       &trans         &trans           &trans        &trans         &trans        &trans         &trans       &trans
                                        &trans   &trans  &trans  &trans &trans    &trans
             >;
         };
 
         upper_dead_key_layer {
-            display-name = "DEAD";
+            display-name = "DEADKEYS";
             bindings = <
           &trans       &trans     &trans       &trans         &trans           &trans        &trans         &trans        &trans         &trans
           &cmp_car_u A &cedille_u &cmp_oe_u    &cmp_car_u O   &none            &none         &cmp_micro     &kp UNDER     &cmp_trem      &cmp_car_u U
