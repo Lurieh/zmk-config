@@ -344,9 +344,9 @@
             display-name = "deadkeys";
             bindings = <
           &trans     &trans     &trans       &trans         &trans           &trans        &trans         &trans        &trans         &trans
-          &kp RA(kp Q)       &kp RA(kp C)   &kp RA(kp P)      &kp RA(kp N9)     &none            &none         &cmp_micro     &kp LS(MINUS)     &cmp_trem      &kp RA(kp N7)
-&trans    &kp RA(kp A)  &kp RA(kp W)  &kp RA(kp E)    &kp RA(kp N3)     &none            &kp LS(kp N9)      &kp LS(kp N0)       &kp RA(kp N8)    &kp RA(kp N8)    &kp RA(kp U)   &trans
-&trans    &kp RA(kp S)     &trans     &trans       &trans         &trans           &trans        &trans         &trans        &trans         &trans       &trans
+          &kp RA(Q) &kp RA(C) &kp RA(P) &kp RA(N9) &none &none &cmp_micro &kp LS(MINUS) &cmp_trem &kp RA(N7)
+&trans    &kp RA(A)  &kp RA(W)  &kp RA(E)    &kp RA(N3)     &none            &kp LS(kp N9)      &kp LS(kp N0)       &kp RA(N8)    &kp RA(N8)    &kp RA(U)   &trans
+&trans    &kp RA(S)     &trans     &trans       &trans         &trans           &trans        &trans         &trans        &trans         &trans       &trans
                                        &trans   &trans  &trans  &trans &trans    &trans
             >;
         };
