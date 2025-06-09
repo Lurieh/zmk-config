@@ -32,6 +32,13 @@
         };
 
         // Ergo-L Macros
+        deadlayer: deadlayer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &sl DEAD_L &kp SEMI>;
+        };
+
         cmp_sq: compose_accents_single_quote {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -265,10 +272,10 @@
         ergo_base_layer {
             display-name = "Ergo-L";
             bindings = <
-          &kp N1      &kp N2     &kp N3     &kp N4       &kp N5                      &kp N6   &kp N7      &kp N8      &kp N9       &kp N0
-          &kp Q       &kp C      &kp O      &kp P        &kp W                       &kp J    &kp M       &kp D       &kp SEMI    &kp Y
- &kp TAB  &hl LALT A &hl LGUI S &hl LSHFT E &hl LCTRL N  &kp F                       &kp L    &hr RCTRL R &hr RSHFT T &hr RGUI I   &hr LALT U &kp ENTER
- &kp BSLH &kp Z       &kp X      &minus_qm  &kp V        &kp B                       &dot_col &kp H       &kp G       &com_scol    &kp K      &kp DOUBLE_QUOTES
+          &kp N1      &kp N2     &kp N3     &kp N4       &kp N5                      &kp N6   &kp N7      &kp N8      &kp N9        &kp N0
+          &kp Q       &kp C      &kp O      &kp P        &kp W                       &kp J    &kp M       &kp D       &kp deadlayer &kp Y
+ &kp TAB  &hl LALT A &hl LGUI S &hl LSHFT E &hl LCTRL N  &kp F                       &kp L    &hr RCTRL R &hr RSHFT T &hr RGUI I    &hr LALT U &kp ENTER
+ &kp BSLH &kp Z       &kp X      &minus_qm  &kp V        &kp B                       &dot_col &kp H       &kp G       &com_scol     &kp K      &kp DOUBLE_QUOTES
                                             &kp ESC &kp SPACE &mo LOWER &mo RAISE &hg RALT BSPC &kp DEL
             >;
         };
@@ -322,10 +329,10 @@
             display-name = "KeyCode";
             bindings = <
           &kp N1     &kp N2   &kp N3   &kp N4   &kp N5                            &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
-          &kp N6     &kp Q    &kp W    &kp E    &kp R                             &none  &none  &none  &none  &none 
-&kp TAB   &kp LSHFT  &kp A    &kp S    &kp D    &kp F                             &none  &none  &none  &none  &none &none 
-&kp ESC   &kp LCTRL  &kp Z    &kp X    &kp C    &kp V                             &none  &none  &none  &none  &none &none 
-                                       &kp LALT &kp SPACE &mo EXTRA_KEYCODE &to BASE  &none  &none 
+          &kp N6     &kp Q    &kp W    &kp E    &kp R                             &kp Y &kp U &kp I &kp O &kp P
+&kp TAB   &kp LSHFT  &kp A    &kp S    &kp D    &kp F                             &kp H &kp J &kp K &kp L &kp SEMI &kp ENTER
+&kp ESC   &kp LCTRL  &kp Z    &kp X    &kp C    &kp V                             &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp T
+                                       &kp LALT &kp SPACE &mo EXTRA_KEYCODE &mo EXTRA_KEYCODE &kp B &to BASE
             >;
         };
 
@@ -346,8 +353,8 @@
             bindings = <
           &trans &trans &trans &trans &trans           &trans &trans &trans &trans &trans
           &kp Z &kp C &kp O &kp L &none                      &none &kp M &kp V &cmp_trem &kp J
-&trans &hl LALT A &hl LGUI W &hl LSHFT E &hl LCTRL D &none     &trans &trans &hr LSHFT K &cmp_i_trem &hr LALT U &trans // CHANGÉ ICI !
-&trans &kp Q &trans &trans &trans &trans &trans          &trans &trans &trans &trans &trans
+&trans &hl LALT A &hl LGUI W &hl LSHFT E &hl LCTRL D &none     &kp LPAR &hr RCTRL RPAR &hr RSHFT K &hr RGUI I &hr LALT U &trans // CHANGÉ ICI !
+&trans &kp Q &kp S &kp F &kp G &kp B                   &kp DOT &kp T &kp Y &kp COMMA &kp N &trans
                                        &trans   &trans  &trans  &trans &trans    &trans
             >;
         };
