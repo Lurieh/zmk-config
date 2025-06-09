@@ -103,7 +103,7 @@
                 #binding-cells = <0>;
                 bindings
                 = <&macro_tap &kp SEMI>
-                    , <&macro_tap &kp SEMI>
+                    , <&macro_tap &kp SEMI>;
             };
 
             cmp_sq_u: compose_accents_single_quote_upper {
