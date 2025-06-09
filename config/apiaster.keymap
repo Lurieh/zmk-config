@@ -103,7 +103,7 @@
                 #binding-cells = <0>;
                 bindings
                 = <&macro_tap &kp SEMI>
-                    , <&macro_tap &kp SEMI>;
+                    , <&macro_tap &kp SEMI>
             };
 
             cmp_sq_u: compose_accents_single_quote_upper {
@@ -255,6 +255,13 @@
                 bindings = <&sl DEAD_L>, <&kp EXCL>;
                 mods = <(MOD_LSFT|MOD_RSFT)>;
             };
+
+            // NEW: Behavior to call the cmp_i_trem macro
+        macro_i_trem_call: macro_i_trem_call {
+            compatible = "zmk,behavior-macro-tap"; // This behavior type is designed to directly call a macro
+                #binding-cells = <0>; // No additional arguments needed for this behavior
+                bindings = <&cmp_i_trem>; // This line tells macro_i_trem_call to execute cmp_i_trem
+            };
         };
 
         keymap {
@@ -355,7 +362,7 @@
                 bindings = <
           &trans &trans &trans &trans &trans           &trans &trans &trans &trans &trans
           &kp Z &kp C &kp O &kp L &none                      &none &kp M &kp V &cmp_trem &kp J
-&trans &hl LALT A &hl LGUI W &hl LSHFT E &hl LCTRL D &none     &trans &trans &hr LSHFT K &hcr LGUI cmp_i_trem &hr LALT U &trans
+&trans &hl LALT A &hl LGUI W &hl LSHFT E &hl LCTRL D &none     &trans &trans &hr LSHFT K &hcr LGUI macro_i_trem_call &hr LALT U &trans // Changed here!
 &trans &kp Q &trans &trans &trans &trans &trans          &trans &trans &trans &trans &trans
                                        &trans   &trans  &trans  &trans &trans    &trans
             >;
@@ -384,4 +391,4 @@
             };
         };
     };
-
+    
