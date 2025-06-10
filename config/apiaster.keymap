@@ -327,7 +327,7 @@
           &trans &trans &trans &trans &trans                                      &trans &trans &trans &trans &trans
           &kp CARET &kp NON_US_BSLH &kp LS(NON_US_BSLH) &kp DOLLAR &kp PERCENT    &kp AT &kp AMPERSAND &kp ASTERISK &kp SINGLE_QUOTE &kp GRAVE
 &trans    &hl LALT LBRC  &hl LGUI LPAR  &hl LSHFT RPAR  &hl LCTRL RBRC  &kp EQUAL &kp BACKSLASH &hr LCTRL PLUS &hr LSHFT MINUS &hr LGUI SLASH &hr LALT DOUBLE_QUOTES &trans
-&trans    &kp LBKT &kp RBKT &kp TILDE &kp UNDER &kp HASH                          &kp PIPE &kp EXCL &kp LESS_THAN &kp GREATER_THAN &trans &trans
+&trans    &kp TILDE &kp LBKT &kp RBKT &kp UNDER &kp HASH                          &kp PIPE &kp EXCL &kp LESS_THAN &kp GREATER_THAN &trans &trans
                                              &trans   &trans  &trans                    &trans &trans    &trans
             >;
         };
