@@ -304,7 +304,7 @@
             bindings = <
           &trans &trans &trans &trans &trans           &trans &trans &trans &trans &trans
           &kp Z &kp C &kp O &kp L &none                      &none &kp M &kp V &cmp_trem &kp J
-&trans &kp A &kp W &htdl DEAD_L_UP E &kp D &none     &kp LPAR &kp RPAR &htdl DEAD_L_UP K &kp I &kp U &trans
+&trans &kp A &kp W &htdl 9 E &kp D &none     &kp LPAR &kp RPAR &htdl 9 K &kp I &kp U &trans
 &trans &kp Q &kp S &kp F &kp G &kp B                   &kp DOT &kp T &kp Y &kp COMMA &kp N &trans
                                        &trans   &trans  &trans  &trans &trans &trans
             >;
