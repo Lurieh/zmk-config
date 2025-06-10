@@ -227,7 +227,7 @@
           &kp Q       &kp C      &kp O      &kp P        &kp W                       &kp J    &kp M       &kp D       &deadlayer    &kp Y
  &kp TAB  &hl LALT A &hl LGUI S &hl LSHFT E &hl LCTRL N  &kp F                       &kp L    &hr RCTRL R &hr RSHFT T &hr RGUI I   &hr LALT U &kp ENTER
  &kp BSLH &kp Z       &kp X      &minus_qm  &kp V        &kp B                       &kp DOT &kp H       &kp G       &kp COMMA    &kp K      &kp DOUBLE_QUOTES
-                                            &kp ESC &kp SPACE &mo LOWER &mo RAISE &hg_ergol 0 BSPC &kp DEL
+                                            &kp ESC &kp SPACE &mo LOWER &mo RAISE &hg_ergol BASE BSPC &kp DEL
             >;
         };
 
@@ -304,7 +304,7 @@
             bindings = <
           &trans &trans &trans &trans &trans           &trans &trans &trans &trans &trans
           &kp Z &kp C &kp O &kp L &none                      &none &kp M &kp V &cmp_trem &kp J
-&trans &kp A &kp W &htdl 9 E &kp D &none     &kp LPAR &kp RPAR &htdl 9 K &kp I &kp U &trans
+&trans &kp A &kp W &htdl DEAD_UP_L E &kp D &none     &kp LPAR &kp RPAR &htdl DEAD_UP_L K &kp I &kp U &trans
 &trans &kp Q &kp S &kp F &kp G &kp B                   &kp DOT &kp T &kp Y &kp COMMA &kp N &trans
                                        &trans   &trans  &trans  &trans &trans &trans
             >;
@@ -325,9 +325,9 @@
             display-name = "Sym";
             bindings = <
           &trans &trans &trans &trans &trans                                      &trans &trans &trans &trans &trans
-          &kp CARET &kp NON_US_BSLH &kp LS(NON_US_BSLH) &kp DOLLAR &kp PERCENT    &kp AT_SIGN &kp AMPERSAND &kp ASTERISK &kp SINGE_QUOTE &kp GRAVE
+          &kp CARET &kp NON_US_BSLH &kp LS(NON_US_BSLH) &kp DOLLAR &kp PERCENT    &kp AT &kp AMPERSAND &kp ASTERISK &kp SINGLE_QUOTE &kp GRAVE
 &trans    &hl LALT LBRC  &hl LGUI LPAR  &hl LSHFT RPAR  &hl LCTRL RBRC  &kp EQUAL &kp BACKSLASH &hr LCTRL PLUS &hr LSHFT MINUS &hr LGUI SLASH &hr LALT DOUBLE_QUOTES &trans
-&trans    &kp LBKT &kp RBKT &kp TILDE &kp UNDER &kp HASH                          &kp PIPE &kp EXCL &kp LESS_THAN &kp GREATER_THAN &trans
+&trans    &kp LBKT &kp RBKT &kp TILDE &kp UNDER &kp HASH                          &kp PIPE &kp EXCL &kp LESS_THAN &kp GREATER_THAN &trans &trans
                                              &trans   &trans  &trans                    &trans &trans    &trans
             >;
         };
