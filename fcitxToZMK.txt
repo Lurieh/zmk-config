@@ -1,0 +1,30 @@
+zmk qwerty
+fcitx ergol
+^<>$%
+{()}=
+~[]_#
+
+@&*'`
+\+-/"
+|!;:?
+
+zmk ergol
+fcitx lafayette
+`@#$%
+{()}=
+[]~vb
+
+^&*|"
+\+-/'
+~;:,k
+
+zmk ergol
+fcitx qwerty
+`@#$%
+{()}=
+[]~vb
+
+^&*|"
+\+-/'
+~<>,k
+
