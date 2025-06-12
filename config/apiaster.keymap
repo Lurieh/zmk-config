@@ -24,7 +24,7 @@
 
 / {    
     macros {
-        double_0: keypad_double_0 {
+            double_0: keypad_double_0 {
             compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings
@@ -50,7 +50,7 @@
         };
 
         behaviors {
-        hl: home_row_hold_tap_left {
+            hl: home_row_hold_tap_left {
             compatible = "zmk,behavior-hold-tap";
                 #binding-cells = <2>;
                 flavor = "balanced";
@@ -115,6 +115,7 @@
                     , <&tog RAISE>;
             };
 
+            // Ergo-L Behaviors
             dot_col: dot_colon {
             compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
@@ -168,6 +169,8 @@
                                             &kp ESC &kp SPACE &td_lower &td_raise &hold_tap RALT BSPC &kp DEL
             >;
             };
+
+            // gaming layers
             keycode_layer {
             display-name = "KeyCode";
                 bindings = <
@@ -175,7 +178,7 @@
           &kp LCTRL  &kp Q    &kp W    &kp E    &kp R                             &kp Y &kp U &kp I &kp O &kp P
 &kp TAB   &kp LSHFT  &kp A    &kp S    &kp D    &kp F                             &kp H &kp J &kp K &kp L &kp SEMI &kp ENTER
 &kp ESC   &kp G  &kp Z    &kp X    &kp C    &kp V                             &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp T
-                                       &kp LALT &kp SPACE &mo EXTRA_KEYCODE &mo RAISE &kp B &to ERGOL
+                                       &kp LALT &kp SPACE &mo EXTRA_KEYCODE &mo RAISE &kp B &mo LOWER
             >;
             };
 
@@ -197,7 +200,7 @@
           &kp LCTRL  &kp Q    &kp T    &kp D    &kp J                             &kp P  &kp SEMI  &kp L     &kp E  &kp R 
 &kp TAB   &kp LSHFT  &kp A    &kp S    &kp I    &kp G                             &kp M  &kp Y     &kp FSLH  &kp H  &kp RS(DOT) &kp ENTER 
 &kp ESC   &kp COMMA  &kp Z    &kp X    &kp W    &kp V                             &kp F  &kp U     &kp DOT   &kp N  &kp L       &kp K 
-                                       &kp LALT &kp SPACE &mo EXTRA_CHARCODE &mo RAISE &kp B &to QWERTY
+                                       &kp LALT &kp SPACE &mo EXTRA_CHARCODE &mo RAISE &kp B &mo LOWER
             >;
             };
 
@@ -234,11 +237,12 @@
             >;
             };
 
+            // Ergo-L overlays
             dead_key_layer {
             display-name = "deadkey";
                 bindings = <
           &trans &trans &trans &trans &trans           &trans &trans &trans &trans &trans
-          &kp Z &kp C &kp O &kp L &none                      &none &kp M &kp V &cmp_trem &kp J
+          &kp Z &kp C &kp O &kp L &none                      &none &kp M &kp V &kp SEMI &kp J
 &trans &kp A &kp W &layer_tap DEAD_UP_L E &kp D &none     &kp LPAR &kp RPAR &layer_tap DEAD_UP_L K &kp I &kp U &trans
 &trans &kp Q &kp S &kp F &kp G &kp B                   &kp DOT &kp T &kp Y &kp COMMA &kp N &trans
                                        &trans   &trans  &trans  &trans &trans &trans
@@ -249,7 +253,7 @@
             display-name = "DEADKEY";
                 bindings = <
        &trans &trans &trans &trans &trans                             &trans &trans &trans &trans &trans
-       &kp RS(Z) &kp RS(C) &kp RS(O) &kp RS(L) &none                  &none       &kp RS(M) &kp RS(V) &cmp_trem     &kp RS(J)
+       &kp RS(Z) &kp RS(C) &kp RS(O) &kp RS(L) &none                  &none       &kp RS(M) &kp RS(V) &kp SEMI     &kp RS(J)
 &trans &kp RS(A) &kp RS(W) &kp RS(E) &kp RS(D) &none                  &none       &none     &kp RS(K) &kp RS(I)     &kp RS(U) &trans
 &trans &kp RS(Q) &kp RS(S) &kp RS(F) &kp RS(G) &kp RS(B)              &kp RS(DOT) &kp RS(T) &kp RS(Y) &kp RS(COMMA) &kp RS(N) &trans
                                        &trans   &trans  &trans  &trans &trans &trans
