@@ -156,8 +156,8 @@
           &kp N1     &kp N2   &kp N3   &kp N4   &kp N5                            &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
           &kp LCTRL  &kp Q    &kp W    &kp E    &kp R                             &kp Y &kp U &kp I &kp O &kp P
 &kp TAB   &kp LSHFT  &kp A    &kp S    &kp D    &kp F                             &kp H &kp J &kp K &kp L &kp SEMI &kp ENTER
-&kp ESC   &kp G  &kp Z    &kp X    &kp C    &kp V                             &kp N &kp M &kp COMMA &kp DOT &kp FSLH &mo LOWER
-                                       &kp LALT &kp SPACE &mo EXTRA_KEYCODE &mo RAISE &kp B &kp T
+&kp ESC   &kp G  &kp Z    &kp X    &kp C    &kp V                             &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp T
+                                       &kp LALT &kp SPACE &mo EXTRA_KEYCODE &mo RAISE &kp B &mo LOWER
             >;
             };
 
@@ -168,7 +168,7 @@
           &kp Y    &kp I  &kp U     &kp O   &kp P                  &trans    &trans  &trans  &trans  &trans  
 &kp LALT  &kp H    &kp J  &kp K     &kp L   &kp SEMI                  &trans    &trans  &trans  &trans  &trans   &trans  
 &trans    &kp N    &kp M  &kp COMMA &kp DOT &kp FSLH                  &trans    &trans  &trans  &trans  &trans   &trans  
-                                       &trans   &mo LOWER  &trans  &trans &trans    &trans
+                                       &trans   &trans  &trans  &trans &trans    &trans
             >;
             };
 
@@ -177,9 +177,9 @@
                 bindings = <
           &kp N1     &kp N2   &kp N3   &kp N4   &kp N5                            &kp N6 &kp N7    &kp N8    &kp N9 &kp N0
           &kp LCTRL  &kp Q    &kp T    &kp D    &kp J                             &kp P  &kp SEMI  &kp L     &kp E  &kp R 
-&kp TAB   &kp LSHFT  &kp A    &kp S    &kp I    &kp G                             &kp M  &kp Y     &kp FSLH  &kp H  &kp RCTRL &kp ENTER 
-&kp ESC   &kp COMMA  &kp Z    &kp X    &kp W    &kp V                             &kp F  &kp U     &kp DOT   &kp N  &kp L     &mo LOWER 
-                                       &kp LALT &kp SPACE &mo EXTRA_CHARCODE &mo RAISE &kp B &kp K
+&kp TAB   &kp LSHFT  &kp A    &kp S    &kp I    &kp G                             &kp M  &kp Y     &kp FSLH  &kp H  &kp RS(DOT) &kp ENTER 
+&kp ESC   &kp COMMA  &kp Z    &kp X    &kp W    &kp V                             &kp F  &kp U     &kp DOT   &kp N  &kp L       &kp K 
+                                       &kp LALT &kp SPACE &mo EXTRA_CHARCODE &mo RAISE &kp B &mo LOWER
             >;
             };
 
@@ -200,8 +200,8 @@
            &kp F1              &kp F2               &kp F3          &kp F4        &kp F5  &kp KP_NUM  &kp KP_NUMBER_7       &kp KP_NUMBER_8       &kp KP_NUMBER_9 &kp KP_DIVIDE
            &kp F6              &kp F7               &kp F8          &kp F9        &kp F10 &kp LS(TAB) &kp KP_NUMBER_4       &kp KP_NUMBER_5       &kp KP_NUMBER_6 &kp KP_MULTIPLY
 &trans &hl LALT SCROLLLOCK &hl LGUI PAUSE_BREAK &hl LSHFT PSCRN &hl LCTRL F12 &kp F11 &kp TAB &hr RCTRL KP_NUMBER_1 &hr RSHFT KP_NUMBER_2 &hr RGUI KP_NUMBER_3 &hr LALT KP_SUBTRACT &kp KP_ENTER
-&studio_unlock &kp F11         &kp F12              &to KEYCODE     &to QWERTY    &to ERGOL &kp KP_EQUAL &kp KP_NUMBER_0 &double_0 &kp KP_DOT &kp KP_PLUS &kp LS(ENTER)
-                                                   &trans &none &trans &trans &BSPC &trans
+&studio_unlock &kp F11            &kp F12              &kp F13         &kp F14       &kp F15 &kp KP_EQUAL &kp KP_NUMBER_0 &double_0 &kp KP_DOT &kp KP_PLUS &kp LS(ENTER)
+                                                   &trans &trans &trans &trans &trans &trans
             >;
             };
 
