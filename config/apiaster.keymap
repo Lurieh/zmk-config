@@ -83,7 +83,7 @@
                 bindings = <&mo>, <&kp>; 
             };
 
-            lthl : layer_tap_hold_left {
+            lthl: layer_tap_hold_left {
             compatible = "zmk,behavior-hold-tap";
                 #binding-cells = <2>;
                 flavor = "balanced";
@@ -95,7 +95,7 @@
                 hold-trigger-on-release;
             };
 
-            lthr : layer_tap_hold_right {
+            lthr: layer_tap_hold_right {
             compatible = "zmk,behavior-hold-tap";
                 #binding-cells = <2>;
                 flavor = "balanced";
