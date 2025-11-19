@@ -75,12 +75,36 @@
                 bindings = <&kp>, <&kp>; 
             };
 
-            layer_tap: layer_tap_simple {
+            layer_hold_tap: layer_hold_tap_simple {
              compatible = "zmk,behavior-hold-tap";
                 #binding-cells = <2>;
                 tapping-term-ms = <225>;
                 flavor = "hold-preferred";
                 bindings = <&mo>, <&kp>; 
+            };
+
+            lthl : layer_tap_hold_left {
+            compatible = "zmk,behavior-hold-tap";
+                #binding-cells = <2>;
+                flavor = "balanced";
+                tapping-term-ms = <280>;
+                quick-tap-ms = <175>;
+                require-prior-idle-ms = <125>;
+                bindings = <&mo>, <&kp>;
+                hold-trigger-key-positions = <KEYS_R THUMBS_R>;
+                hold-trigger-on-release;
+            };
+
+            lthr : layer_tap_hold_right {
+            compatible = "zmk,behavior-hold-tap";
+                #binding-cells = <2>;
+                flavor = "balanced";
+                tapping-term-ms = <280>;
+                quick-tap-ms = <175>;
+                require-prior-idle-ms = <125>;
+                bindings = <&mo>, <&kp>;
+                hold-trigger-key-positions = <KEYS_L THUMBS_L>;
+                hold-trigger-on-release;
             };
 
             td_rst: reset_tap_dance {
@@ -134,7 +158,7 @@
           &kp Q       &kp C      &kp O      &kp P        &kp W                       &kp J    &kp M       &kp D       &deadkey_excl_morph &kp Y
  &kp TAB  &hl LALT A &hl LGUI S &hl LSHFT E &hl LCTRL N  &kp F                       &kp L    &hr RCTRL R &hr RSHFT T &hr RGUI I   &hr LALT U &kp ENTER
  &kp BSLH &kp Z       &kp X      &minus_qm  &kp V        &kp B                       &kp DOT &kp H       &kp G       &kp COMMA    &kp K      &kp DOUBLE_QUOTES
-                                            &kp ESC &kp SPACE &td_lower &td_raise &layer_tap SYM_LAYER BSPC &kp DEL
+                                            &kp ESC &kp SPACE &td_lower &td_raise &layer_hold_tap SYM_LAYER BSPC &kp DEL
             >;
             };
 
@@ -222,7 +246,7 @@
                 bindings = <
           &trans &trans &trans &trans &trans           &trans &trans &trans &trans &trans
           &kp Z &kp C &kp O &kp L &none                      &none &kp M &kp V &kp SEMI &kp J
-&trans &kp A &kp W &layer_tap DEAD_UP_L E &kp D &none     &kp LPAR &kp RPAR &layer_tap DEAD_UP_L K &kp I &kp U &trans
+&trans &kp A &kp W &lthl DEAD_UP_L E &kp D &none     &kp LPAR &kp RPAR &lthr DEAD_UP_L K &kp I &kp U &trans
 &trans &kp Q &kp S &kp F &kp G &kp B                   &kp DOT &kp T &kp Y &kp COMMA &kp N &trans
                                        &trans   &trans  &trans  &trans &trans &trans
             >;
