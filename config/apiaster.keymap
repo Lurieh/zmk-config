@@ -118,7 +118,7 @@
             tapping-term-ms = <180>;
             quick-tap-ms = <150>;
             require-prior-idle-ms = <125>;
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp>, <&delay_bspc>;
         };
 
         td_rst: reset_tap_dance {
