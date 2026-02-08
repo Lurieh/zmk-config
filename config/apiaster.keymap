@@ -42,8 +42,8 @@
         };
 
         delay_bspc: delayed_backspace {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>; // Elle accepte maintenant un argument
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             bindings
                 = <&macro_press &kp BSPC>
                 , <&macro_wait_time 20>
@@ -108,7 +108,7 @@
             tapping-term-ms = <180>;
             quick-tap-ms = <150>;
             require-prior-idle-ms = <125>;
-            bindings = <&mo>, <&kp>;
+            bindings = <&mo>, <&delay_bspc>;
         };
 
         htbspc: hold_tap_backspace {
@@ -172,7 +172,7 @@
       &kp Q       &kp C      &kp O      &kp P        &kp W                       &kp J    &kp M       &kp D       &deadkey_excl_morph &kp Y
 &kp TAB  &hl LALT A &hl LGUI S &hl LSHFT E &hl LCTRL N  &kp F                       &kp L    &hr RCTRL R &hr RSHFT T &hr RGUI I   &hr LALT U &kp ENTER
 &kp BSLH &kp Z       &kp X      &minus_qm  &kp V        &kp B                       &kp DOT &kp H       &kp G       &kp COMMA    &kp K      &kp DOUBLE_QUOTES
-                                        &kp ESC &kp SPACE &td_lower &td_raise &ltbspc SYM_LAYER delay_bspc &kp DEL
+                                        &kp ESC &kp SPACE &td_lower &td_raise &ltbspc SYM_LAYER 0 &kp DEL
         >;
         };
 
@@ -183,7 +183,7 @@
       &kp Q      &kp W      &kp E       &kp R       &kp T                       &kp Y     &kp U       &kp I       &kp O      &kp P
 &kp TAB   &hl LALT A &hl LGUI S &hl LSHFT D &hl LCTRL F &kp G                       &kp H     &hr RCTRL J &hr RSHFT K &hr RGUI L &hr LALT SEMI &kp ENTER
 &kp BSLH &kp Z      &kp X      &kp C       &kp V       &kp B                       &kp N     &kp M       &kp COMMA   &kp DOT    &kp FSLH      &kp SQT
-                                        &kp ESC &kp SPACE &td_lower &td_raise &htbspc RALT delay_bspc &kp DEL
+                                        &kp ESC &kp SPACE &td_lower &td_raise &htbspc RALT 0 &kp DEL
         >;
         };
 
