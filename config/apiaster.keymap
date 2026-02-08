@@ -103,7 +103,7 @@
                 /* hold-trigger-on-release; */
             };
 
-            hr: home_row_hold_tap_right {
+            htbspc: hold_tap_backspace {
             compatible = "zmk,behavior-hold-tap";
                 #binding-cells = <2>;
                 flavor = "balanced";
