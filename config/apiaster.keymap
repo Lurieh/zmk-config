@@ -67,20 +67,26 @@
                 hold-trigger-on-release;
             };
 
-            hold_tap: hold_tap_simple {
-            compatible = "zmk,behavior-hold-tap";
+            layer_hold_tap: layer_hold_tap_simple {
+                compatible = "zmk,behavior-hold-tap";
                 #binding-cells = <2>;
+                flavor = "balanced";               // ← Critical change
                 tapping-term-ms = <225>;
-                flavor = "hold-preferred";
-                bindings = <&kp>, <&kp>; 
+                quick-tap-ms = <175>;              // Optional but helpful
+                require-prior-idle-ms = <100>;     // Optional debounce
+                bindings = <&mo>, <&kp>;
+                hold-trigger-on-release;           // ← Critical change
             };
 
-            layer_hold_tap: layer_hold_tap_simple {
-             compatible = "zmk,behavior-hold-tap";
+            hold_tap: hold_tap_backspace {
+                compatible = "zmk,behavior-hold-tap";
                 #binding-cells = <2>;
+                flavor = "balanced";               // ← Critical change
                 tapping-term-ms = <225>;
-                flavor = "hold-preferred";
-                bindings = <&mo>, <&kp>; 
+                quick-tap-ms = <175>;              // Optional but helpful
+                require-prior-idle-ms = <100>;     // Optional debounce
+                bindings = <&kp>, <&kp>;
+                hold-trigger-on-release;           // ← Critical change
             };
 
             lthl: layer_tap_hold_left {
