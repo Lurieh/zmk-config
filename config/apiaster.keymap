@@ -91,6 +91,30 @@
                 hold-trigger-on-release;
             };
 
+            ltbspc: layer_tap_backspace {
+            compatible = "zmk,behavior-hold-tap";
+                #binding-cells = <2>;
+                flavor = "balanced";
+                tapping-term-ms = <200>;
+                quick-tap-ms = <175>;
+                require-prior-idle-ms = <125>;
+                bindings = <&mo>, <&kp>;
+                /* hold-trigger-key-positions = <KEYS_L THUMBS_L>; */
+                /* hold-trigger-on-release; */
+            };
+
+            hr: home_row_hold_tap_right {
+            compatible = "zmk,behavior-hold-tap";
+                #binding-cells = <2>;
+                flavor = "balanced";
+                tapping-term-ms = <200>;
+                quick-tap-ms = <175>;
+                require-prior-idle-ms = <125>;
+                bindings = <&kp>, <&kp>;
+                /* hold-trigger-key-positions = <KEYS_L THUMBS_L>; */
+                /* hold-trigger-on-release; */
+            };
+
             td_rst: reset_tap_dance {
             compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
