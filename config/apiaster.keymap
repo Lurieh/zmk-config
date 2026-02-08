@@ -94,9 +94,9 @@
             ltbspc: layer_tap_backspace {
             compatible = "zmk,behavior-hold-tap";
                 #binding-cells = <2>;
-                flavor = "balanced";
-                tapping-term-ms = <200>;
-                quick-tap-ms = <175>;
+                flavor = "hold-preferred";
+                tapping-term-ms = <180>;
+                quick-tap-ms = <150>;
                 require-prior-idle-ms = <125>;
                 bindings = <&mo>, <&kp>;
                 /* hold-trigger-key-positions = <KEYS_L THUMBS_L>; */
@@ -106,9 +106,9 @@
             htbspc: hold_tap_backspace {
             compatible = "zmk,behavior-hold-tap";
                 #binding-cells = <2>;
-                flavor = "balanced";
-                tapping-term-ms = <200>;
-                quick-tap-ms = <175>;
+                flavor = "hold-preferred";
+                tapping-term-ms = <180>;
+                quick-tap-ms = <150>;
                 require-prior-idle-ms = <125>;
                 bindings = <&kp>, <&kp>;
                 /* hold-trigger-key-positions = <KEYS_L THUMBS_L>; */
