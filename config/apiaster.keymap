@@ -42,8 +42,8 @@
         };
 
         delay_bspc: delayed_backspace {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>; // Elle accepte maintenant un argument
             bindings
                 = <&macro_press &kp BSPC>
                 , <&macro_wait_time 20>
@@ -109,8 +109,6 @@
             quick-tap-ms = <150>;
             require-prior-idle-ms = <125>;
             bindings = <&mo>, <&kp>;
-            /* hold-trigger-key-positions = <KEYS_L THUMBS_L>; */
-            /* hold-trigger-on-release; */
         };
 
         htbspc: hold_tap_backspace {
@@ -121,8 +119,6 @@
             quick-tap-ms = <150>;
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
-            /* hold-trigger-key-positions = <KEYS_L THUMBS_L>; */
-            /* hold-trigger-on-release; */
         };
 
         td_rst: reset_tap_dance {
