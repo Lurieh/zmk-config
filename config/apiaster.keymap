@@ -6,8 +6,6 @@
 #define QWERTY 1
 #define KEYCODE 2
 #define EXTRA_KEYCODE 3
-#define CHARCODE 4
-#define EXTRA_CHARCODE 5
 #define LOWER 6
 #define RAISE 7
 #define DEAD_L 8
@@ -210,28 +208,6 @@
         >;
         };
 
-        charcode_layer {
-        display-name = "CharCode";
-            bindings = <
-      &kp N1     &kp N2   &kp N3   &kp N4   &kp N5                            &kp N6 &kp N7    &kp N8    &kp N9 &kp N0
-      &kp LCTRL  &kp Q    &kp T    &kp D    &kp J                             &kp P  &kp SEMI  &kp L     &kp E  &kp R 
-&kp TAB   &kp LSHFT  &kp A    &kp S    &kp I    &kp G                             &kp M  &kp Y     &kp FSLH  &kp H  &kp RCTRL &kp ENTER 
-&kp ESC   &kp COMMA  &kp Z    &kp X    &kp W    &kp V                             &kp F  &kp U     &kp DOT   &kp N  &kp L     &mo LOWER 
-                                   &kp LALT &kp SPACE &mo EXTRA_CHARCODE &mo RAISE &kp B &kp K
-        >;
-        };
-
-        extra_charcode_layer {
-        display-name = "CharCode+";
-            bindings = <
-      &trans   &trans   &kp K    &kp COMMA &kp B                              &trans &trans &trans &trans &trans  
-      &kp P    &kp SEMI &kp L    &kp E     &kp R                              &trans &trans &trans &trans &trans  
-&kp LALT  &kp M    &kp Y    &kp FSLH &kp H     &kp RS(DOT)                        &trans &trans &trans &trans &trans &trans  
-&trans    &kp F    &kp U    &kp DOT  &kp N     &kp L                              &trans &trans &trans &trans &trans &trans  
-                                   &trans   &trans  &trans  &trans &trans    &trans
-        >;
-        };
-
         lower_layer {
         display-name = "lower";
             bindings = <
@@ -249,7 +225,7 @@
        &kp C_BRI_DN  &kp C_BRI_UP &kp C_MUTE      &kp C_VOL_DN      &kp C_VOL_UP        &trans    &trans    &trans    &trans    &trans
        &kp C_PREV    &kp C_RW     &kp C_PP        &kp C_FF          &kp C_NEXT          &kp PG_UP &kp HOME  &kp UP    &kp END   &trans
 &trans &hl LALT CLCK &hl LGUI INS &hl LSHFT PSCRN &hl LCTRL K_CMENU &studio_unlock      &kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT &trans         &sys_reset
-&trans &trans       &to CHARCODE &to KEYCODE     &to QWERTY            &to ERGOL           &kp C_PP  &kp RCTRL &kp RSHFT &kp RGUI  &hr LALT C_PWR &bootloader
+&trans &trans       &trans &to KEYCODE     &to QWERTY            &to ERGOL           &kp C_PP  &kp RCTRL &kp RSHFT &kp RGUI  &hr LALT C_PWR &bootloader
                                            &trans &trans &trans &tog RAISE &trans &trans
         >;
         };
