@@ -238,7 +238,7 @@
        &kp F6              &kp F7               &kp F8          &kp F9        &kp F10 &kp LS(TAB) &kp KP_NUMBER_4       &kp KP_NUMBER_5       &kp KP_NUMBER_6 &kp KP_MULTIPLY
 &trans &hl LALT SCROLLLOCK &hl LGUI PAUSE_BREAK &hl LSHFT PSCRN &hl LCTRL F12 &kp F11 &kp TAB &hr RCTRL KP_NUMBER_1 &hr RSHFT KP_NUMBER_2 &hr RGUI KP_NUMBER_3 &hr LALT KP_SUBTRACT &kp KP_ENTER
 &studio_unlock &kp F11         &kp F12              &to KEYCODE     &to QWERTY    &to ERGOL &kp KP_EQUAL &kp KP_NUMBER_0 &double_0 &kp KP_DOT &kp KP_PLUS &kp LS(ENTER)
-                                               &trans &none &tog LOWER &trans &kp BSPC &trans
+                                               &trans &none &tog RAISE &trans &kp BSPC &trans
         >;
         };
 
